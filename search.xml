@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>免费申请域名</title>
+      <link href="/2022/12/17/%E5%85%8D%E8%B4%B9%E7%94%B3%E8%AF%B7%E5%9F%9F%E5%90%8D/"/>
+      <url>/2022/12/17/%E5%85%8D%E8%B4%B9%E7%94%B3%E8%AF%B7%E5%9F%9F%E5%90%8D/</url>
+      
+        <content type="html"><![CDATA[<h1 id="域名申请"><a href="#域名申请" class="headerlink" title="域名申请"></a>域名申请</h1><h2 id="需要的网站"><a href="#需要的网站" class="headerlink" title="需要的网站"></a>需要的网站</h2><ol><li><p><a href="http://www.freenom.com/en/index.html">freenom</a></p></li><li><p><a href="https://www.meiguodizhi.com/">地址生成器</a></p></li><li><p><a href="https://dash.cloudflare.com/login">cloudflare</a></p></li></ol><ul><li>需要科学上网（然后弄个美国节点，这样好注册<a href="http://www.freenom.com/en/index.html">freenom</a>)</li></ul><h1 id="第一步申请域名"><a href="#第一步申请域名" class="headerlink" title="第一步申请域名"></a>第一步申请域名</h1><h2 id="打开-freenom-网址，点进去可以看到如下图"><a href="#打开-freenom-网址，点进去可以看到如下图" class="headerlink" title="打开 freenom 网址，点进去可以看到如下图"></a>打开 freenom 网址，点进去可以看到如下图</h2><p><img src="/img/A.png"></p><p>在搜索框内输入你想要的域名，然后点击 Check Availability 查看。</p><h4 id="这里我就随便输入一个域名（红色圈起来的是可有域名）"><a href="#这里我就随便输入一个域名（红色圈起来的是可有域名）" class="headerlink" title="这里我就随便输入一个域名（红色圈起来的是可有域名）"></a>这里我就随便输入一个域名（红色圈起来的是可有域名）</h4><p><img src="/img/B.png"><br>然后点击圈起来的那个按钮，点了之后在点击下个红色按钮<br><img src="/img/C.png"><br>点进去之后出现如下图（长方形内是选月份，我这里选的是十二个月）<br>点击继续之后会出现注册页面,要你注册一个 freenom 账号。我这里早就注册了就没演示，倒时候就会用到<a href="https://www.meiguodizhi.com/">地址生成器</a>。<br>不知道怎么注册的这里有(<a href="/img/%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C.mp4">视频</a>)</p><p><img src="/img/DD.png"><br>在点击圈起来的按钮，点击之后出现如下图<br><img src="/img/E.png"><br>打勾，点击完成订单<br><img src="/img/F.png"><br>看到这张图就表示申请成功了，然后在点击服务，点击我的域名<br><img src="/img/G.png"><br>就能看到自己申请的域名了<br><img src="/img/H.png"><br>到这里域名就申请成功了。接下来就是把域名托管到<a href="https://dash.cloudflare.com/login">cloudflare</a></p><h1 id="第二步把申请到的域名托管到cloudflare"><a href="#第二步把申请到的域名托管到cloudflare" class="headerlink" title="第二步把申请到的域名托管到cloudflare"></a>第二步把申请到的域名托管到<a href="https://dash.cloudflare.com/login">cloudflare</a></h1>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 域名申请 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>第三篇文章</title>
       <link href="/2022/12/16/%E7%AC%AC%E4%B8%89%E7%AF%87%E6%96%87%E7%AB%A0/"/>
       <url>/2022/12/16/%E7%AC%AC%E4%B8%89%E7%AF%87%E6%96%87%E7%AB%A0/</url>
