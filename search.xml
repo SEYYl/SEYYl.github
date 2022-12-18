@@ -27,7 +27,7 @@
       <link href="/2022/12/16/%E7%AC%AC%E4%B8%89%E7%AF%87%E6%96%87%E7%AB%A0/"/>
       <url>/2022/12/16/%E7%AC%AC%E4%B8%89%E7%AF%87%E6%96%87%E7%AB%A0/</url>
       
-        <content type="html"><![CDATA[<p><img src="/img/alipay.jpg"></p><h1 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h1><ol><li>hexo clean  清理缓存  </li><li>hexo g  生成网站静态文件到默认设置的 public 文件夹(hexo generate 的缩写)  </li><li>hexo s  网站预览</li><li>hexo d 部署</li></ol>]]></content>
+        <content type="html"><![CDATA[<p><img src="/img/alipay.jpg"></p><h1 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h1><ol><li>hexo clean 清理缓存</li><li>hexo g 生成网站静态文件到默认设置的 public 文件夹(hexo generate 的缩写)</li><li>hexo s 网站预览</li><li>hexo d 部署</li></ol>]]></content>
       
       
       
