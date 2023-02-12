@@ -3,11 +3,11 @@
   <title>白鲸</title>
   
   
-  <link href="https://www.blogog.top/atom.xml" rel="self"/>
+  <link href="https://blogog.top/atom.xml" rel="self"/>
   
-  <link href="https://www.blogog.top/"/>
-  <updated>2023-02-10T02:05:16.217Z</updated>
-  <id>https://www.blogog.top/</id>
+  <link href="https://blogog.top/"/>
+  <updated>2023-02-12T13:24:24.184Z</updated>
+  <id>https://blogog.top/</id>
   
   <author>
     <name>鲸落</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>文章转载</title>
-    <link href="https://www.blogog.top/2023/02/08/%E6%96%87%E7%AB%A0%E8%BD%AC%E8%BD%BD/"/>
-    <id>https://www.blogog.top/2023/02/08/%E6%96%87%E7%AB%A0%E8%BD%AC%E8%BD%BD/</id>
+    <link href="https://blogog.top/posts/516ae0b5.html"/>
+    <id>https://blogog.top/posts/516ae0b5.html</id>
     <published>2023-02-08T11:34:59.000Z</published>
-    <updated>2023-02-10T02:05:16.217Z</updated>
+    <updated>2023-02-12T13:24:24.184Z</updated>
     
     <content type="html"><![CDATA[<h1 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h1><h3 id="1、打开自己喜欢的博客的文章，然后同时按shift-ctrl-I三个键，打开开发者工具"><a href="#1、打开自己喜欢的博客的文章，然后同时按shift-ctrl-I三个键，打开开发者工具" class="headerlink" title="1、打开自己喜欢的博客的文章，然后同时按shift+ctrl+I三个键，打开开发者工具"></a>1、打开自己喜欢的博客的文章，然后同时按shift+ctrl+I三个键，打开开发者工具</h3><h3 id="2、选择elements选项，按下面图片选择（chorme浏览器）：有可能比较难找（一般在比较靠后的位置），先找到-lt-div-id-‘article-content’……-gt-，一般鼠标点在上面会把全部博客文章加侧边栏给选中"><a href="#2、选择elements选项，按下面图片选择（chorme浏览器）：有可能比较难找（一般在比较靠后的位置），先找到-lt-div-id-‘article-content’……-gt-，一般鼠标点在上面会把全部博客文章加侧边栏给选中" class="headerlink" title="2、选择elements选项，按下面图片选择（chorme浏览器）：有可能比较难找（一般在比较靠后的位置），先找到&lt;div id=‘article_content’……&gt;，一般鼠标点在上面会把全部博客文章加侧边栏给选中"></a>2、选择elements选项，按下面图片选择（<a href="https://so.csdn.net/so/search?q=chorme&amp;spm=1001.2101.3001.7020" target="_blank" class="hl hl-1" data-report-click="{&quot;spm&quot;:&quot;1001.2101.3001.7020&quot;,&quot;dest&quot;:&quot;https://so.csdn.net/so/search?q=chorme&amp;spm=1001.2101.3001.7020&quot;,&quot;extra&quot;:&quot;{\&quot;searchword\&quot;:\&quot;chorme\&quot;}&quot;}" data-tit="chorme" data-pretit="chorme">chorme</a>浏览器）：有可能比较难找（一般在比较靠后的位置），先找到&lt;div id=‘article_content’……&gt;，一般鼠标点在上面会把全部博客文章加侧边栏给选中</h3>  <p><img src="https://img-blog.csdnimg.cn/20201106164251528.jpg#pic_center" alt="在这里插入图片描述"></p><h3 id="3、再点击进去就可以看到鼠标点击右键再点击copy-element复制下来。"><a href="#3、再点击进去就可以看到鼠标点击右键再点击copy-element复制下来。" class="headerlink" title="3、再点击进去就可以看到鼠标点击右键再点击copy element复制下来。"></a>3、再点击进去就可以看到鼠标点击右键再点击copy element复制下来。</h3>  <p><img src="https://img-blog.csdnimg.cn/20201106164316482.jpg#pic_center" alt="在这里插入图片描述"></p> <h3 id="4、在自己csdn博客的下”MarkDown编辑器”或Typora文本中，Ctrl-V粘贴在Markdown编辑器上，即可完全复制别人的博客，显示出内容。"><a href="#4、在自己csdn博客的下”MarkDown编辑器”或Typora文本中，Ctrl-V粘贴在Markdown编辑器上，即可完全复制别人的博客，显示出内容。" class="headerlink" title="4、在自己csdn博客的下”MarkDown编辑器”或Typora文本中，Ctrl+V粘贴在Markdown编辑器上，即可完全复制别人的博客，显示出内容。"></a>4、在自己csdn博客的下”MarkDown编辑器”或<a href="https://so.csdn.net/so/search?q=Typora&amp;spm=1001.2101.3001.7020" target="_blank" class="hl hl-1" rel="noopener noreferrer">Typora</a>文本中，Ctrl+V粘贴在Markdown编辑器上，即可完全复制别人的博客，显示出内容。</h3>]]></content>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>微标细用使用教程</title>
-    <link href="https://www.blogog.top/2023/01/26/%E5%BE%AE%E6%A0%87%E7%BB%86%E7%94%A8%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
-    <id>https://www.blogog.top/2023/01/26/%E5%BE%AE%E6%A0%87%E7%BB%86%E7%94%A8%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</id>
+    <link href="https://blogog.top/posts/ab29e5b.html"/>
+    <id>https://blogog.top/posts/ab29e5b.html</id>
     <published>2023-01-26T10:27:19.000Z</published>
     <updated>2023-02-10T02:05:16.215Z</updated>
     
@@ -54,14 +54,14 @@
     
     
     
-    <category term="微标" scheme="https://www.blogog.top/tags/%E5%BE%AE%E6%A0%87/"/>
+    <category term="微标" scheme="https://blogog.top/tags/%E5%BE%AE%E6%A0%87/"/>
     
   </entry>
   
   <entry>
     <title>butterfly第三方</title>
-    <link href="https://www.blogog.top/2023/01/25/butterfly%E4%B8%BB%E9%A2%98%E7%AC%AC%E4%B8%89%E6%96%B9%E6%96%87%E7%AB%A0/"/>
-    <id>https://www.blogog.top/2023/01/25/butterfly%E4%B8%BB%E9%A2%98%E7%AC%AC%E4%B8%89%E6%96%B9%E6%96%87%E7%AB%A0/</id>
+    <link href="https://blogog.top/posts/f1068b53.html"/>
+    <id>https://blogog.top/posts/f1068b53.html</id>
     <published>2023-01-25T11:52:55.000Z</published>
     <updated>2023-02-10T02:05:16.184Z</updated>
     
@@ -77,14 +77,14 @@
     
     
     
-    <category term="第三方文章" scheme="https://www.blogog.top/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E6%96%87%E7%AB%A0/"/>
+    <category term="第三方文章" scheme="https://blogog.top/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E6%96%87%E7%AB%A0/"/>
     
   </entry>
   
   <entry>
     <title>Typora的使用说明</title>
-    <link href="https://www.blogog.top/2023/01/25/Typora%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/"/>
-    <id>https://www.blogog.top/2023/01/25/Typora%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</id>
+    <link href="https://blogog.top/posts/f0ef015e.html"/>
+    <id>https://blogog.top/posts/f0ef015e.html</id>
     <published>2023-01-25T04:21:48.000Z</published>
     <updated>2023-02-10T02:05:16.181Z</updated>
     
@@ -99,14 +99,14 @@
     
     
     
-    <category term="Typora使用说明" scheme="https://www.blogog.top/tags/Typora%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/"/>
+    <category term="Typora使用说明" scheme="https://blogog.top/tags/Typora%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/"/>
     
   </entry>
   
   <entry>
     <title>刷入第三方Rrecovery教程</title>
-    <link href="https://www.blogog.top/2023/01/25/%E5%88%B7%E5%85%A5%E7%AC%AC%E4%B8%89%E6%96%B9Rrecovery%E6%95%99%E7%A8%8B/"/>
-    <id>https://www.blogog.top/2023/01/25/%E5%88%B7%E5%85%A5%E7%AC%AC%E4%B8%89%E6%96%B9Rrecovery%E6%95%99%E7%A8%8B/</id>
+    <link href="https://blogog.top/posts/2e9081ea.html"/>
+    <id>https://blogog.top/posts/2e9081ea.html</id>
     <published>2023-01-25T04:19:20.000Z</published>
     <updated>2023-02-10T02:05:16.202Z</updated>
     
@@ -121,14 +121,14 @@
     
     
     
-    <category term="刷入第三方Rec" scheme="https://www.blogog.top/tags/%E5%88%B7%E5%85%A5%E7%AC%AC%E4%B8%89%E6%96%B9Rec/"/>
+    <category term="刷入第三方Rec" scheme="https://blogog.top/tags/%E5%88%B7%E5%85%A5%E7%AC%AC%E4%B8%89%E6%96%B9Rec/"/>
     
   </entry>
   
   <entry>
     <title>双系统安装教程</title>
-    <link href="https://www.blogog.top/2023/01/25/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
-    <id>https://www.blogog.top/2023/01/25/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</id>
+    <link href="https://blogog.top/posts/undefined.html"/>
+    <id>https://blogog.top/posts/undefined.html</id>
     <published>2023-01-25T04:18:12.000Z</published>
     <updated>2023-02-04T02:15:31.425Z</updated>
     
@@ -144,14 +144,14 @@
     
     
     
-    <category term="Windows11+Manjaro" scheme="https://www.blogog.top/tags/Windows11-Manjaro/"/>
+    <category term="Windows11+Manjaro" scheme="https://blogog.top/tags/Windows11-Manjaro/"/>
     
   </entry>
   
   <entry>
     <title>Alist挂载百度网盘等</title>
-    <link href="https://www.blogog.top/2023/01/25/Alist%E6%8C%82%E8%BD%BD%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E7%AD%89/"/>
-    <id>https://www.blogog.top/2023/01/25/Alist%E6%8C%82%E8%BD%BD%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E7%AD%89/</id>
+    <link href="https://blogog.top/posts/624ef525.html"/>
+    <id>https://blogog.top/posts/624ef525.html</id>
     <published>2023-01-25T04:12:34.000Z</published>
     <updated>2023-02-10T02:05:16.172Z</updated>
     
@@ -166,14 +166,14 @@
     
     
     
-    <category term="Alist挂载" scheme="https://www.blogog.top/tags/Alist%E6%8C%82%E8%BD%BD/"/>
+    <category term="Alist挂载" scheme="https://blogog.top/tags/Alist%E6%8C%82%E8%BD%BD/"/>
     
   </entry>
   
   <entry>
     <title>Linux系统软件安装</title>
-    <link href="https://www.blogog.top/2023/01/25/Linux%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    <id>https://www.blogog.top/2023/01/25/Linux%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</id>
+    <link href="https://blogog.top/posts/7968a355.html"/>
+    <id>https://blogog.top/posts/7968a355.html</id>
     <published>2023-01-25T04:08:03.000Z</published>
     <updated>2023-02-10T02:05:16.187Z</updated>
     
@@ -188,14 +188,14 @@
     
     
     
-    <category term="Linux" scheme="https://www.blogog.top/tags/Linux/"/>
+    <category term="Linux" scheme="https://blogog.top/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Linux课程笔记</title>
-    <link href="https://www.blogog.top/2023/01/25/Linux%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
-    <id>https://www.blogog.top/2023/01/25/Linux%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/</id>
+    <link href="https://blogog.top/posts/590f2ba.html"/>
+    <id>https://blogog.top/posts/590f2ba.html</id>
     <published>2023-01-25T03:06:47.000Z</published>
     <updated>2023-02-10T02:05:16.175Z</updated>
     
@@ -210,14 +210,14 @@
     
     
     
-    <category term="Linux基础命令" scheme="https://www.blogog.top/tags/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/"/>
+    <category term="Linux基础命令" scheme="https://blogog.top/tags/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
   <entry>
     <title>免费申请域名</title>
-    <link href="https://www.blogog.top/2022/12/17/%E5%85%8D%E8%B4%B9%E7%94%B3%E8%AF%B7%E5%9F%9F%E5%90%8D/"/>
-    <id>https://www.blogog.top/2022/12/17/%E5%85%8D%E8%B4%B9%E7%94%B3%E8%AF%B7%E5%9F%9F%E5%90%8D/</id>
+    <link href="https://blogog.top/posts/99a5c448.html"/>
+    <id>https://blogog.top/posts/99a5c448.html</id>
     <published>2022-12-17T15:38:22.000Z</published>
     <updated>2023-02-10T02:05:16.193Z</updated>
     
@@ -233,16 +233,16 @@
     
     
     
-    <category term="域名申请" scheme="https://www.blogog.top/tags/%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7/"/>
+    <category term="域名申请" scheme="https://blogog.top/tags/%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7/"/>
     
   </entry>
   
   <entry>
     <title>博客指令</title>
-    <link href="https://www.blogog.top/2022/12/16/%E5%8D%9A%E5%AE%A2%E6%8C%87%E4%BB%A4/"/>
-    <id>https://www.blogog.top/2022/12/16/%E5%8D%9A%E5%AE%A2%E6%8C%87%E4%BB%A4/</id>
+    <link href="https://blogog.top/posts/62a96202.html"/>
+    <id>https://blogog.top/posts/62a96202.html</id>
     <published>2022-12-16T14:13:57.000Z</published>
-    <updated>2023-02-10T02:05:16.205Z</updated>
+    <updated>2023-02-11T13:26:50.599Z</updated>
     
     <content type="html"><![CDATA[<!-- 1.  hexo clean 清理缓存2.  hexo g 生成网站静态文件到默认设置的 public 文件夹(hexo generate 的缩写)3.  hexo s 网站预览4.  hexo d 部署 --><div class="tip info"><p>1.hexo clean 清理缓存</p></div><div class="tip info"><p>2.hexo g 生成网站静态文件到默认设置的 public 文件夹(hexo generate 的缩写)</p></div><div class="tip info"><p>3.exo s 网站预览</p></div><div class="tip info"><p>4.hexo d 部署</p></div>]]></content>
     
@@ -259,14 +259,14 @@
     
     
     
-    <category term="指令" scheme="https://www.blogog.top/tags/%E6%8C%87%E4%BB%A4/"/>
+    <category term="指令" scheme="https://blogog.top/tags/%E6%8C%87%E4%BB%A4/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://www.blogog.top/2022/11/25/hello-world/"/>
-    <id>https://www.blogog.top/2022/11/25/hello-world/</id>
+    <link href="https://blogog.top/posts/4a17b156.html"/>
+    <id>https://blogog.top/posts/4a17b156.html</id>
     <published>2022-11-25T04:12:34.000Z</published>
     <updated>2023-02-10T02:05:16.190Z</updated>
     
