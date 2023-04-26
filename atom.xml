@@ -6,7 +6,7 @@
   <link href="https://blogog.top/atom.xml" rel="self"/>
   
   <link href="https://blogog.top/"/>
-  <updated>2023-02-12T13:50:42.989Z</updated>
+  <updated>2023-02-19T11:30:04.688Z</updated>
   <id>https://blogog.top/</id>
   
   <author>
@@ -15,6 +15,94 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>同一台电脑管理多个SSH</title>
+    <link href="https://blogog.top/posts/9fe78a1c.html"/>
+    <id>https://blogog.top/posts/9fe78a1c.html</id>
+    <published>2023-02-19T11:10:08.000Z</published>
+    <updated>2023-02-19T11:30:04.688Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="同一台电脑管理多个SSH-key"><a href="#同一台电脑管理多个SSH-key" class="headerlink" title="同一台电脑管理多个SSH key"></a>同一台电脑管理多个SSH key</h1><h2 id="SSH-key生成"><a href="#SSH-key生成" class="headerlink" title="SSH key生成"></a>SSH key生成</h2><h4 id="ssh-key生成"><a href="#ssh-key生成" class="headerlink" title="ssh key生成"></a>ssh key生成</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;xxx@xxx.com&quot; </span><br></pre></td></tr></table></figure><p>此时会提示保存key的名字及路径，我们只需要自定义key的名字（路径）即可。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter file in which to save the key (/Users/caichenghan/.ssh/id_rsa): </span><br></pre></td></tr></table></figure><h4 id="填写自定义路径"><a href="#填写自定义路径" class="headerlink" title="填写自定义路径"></a>填写自定义路径</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Users/caichenghan/.ssh/id_rsa_github </span><br></pre></td></tr></table></figure><p>输入密码生成 <code>ssh key</code> ，可直接按Enter进入生成。</p><h4 id="查看生成的ssh-key"><a href="#查看生成的ssh-key" class="headerlink" title="查看生成的ssh key"></a>查看生成的ssh key</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /Users/caichenghan/.ssh</span><br><span class="line">ls </span><br></pre></td></tr></table></figure><p>目录下会多出2个文件，分别为 <code>id_rsa_github</code> 、 <code>id_rsa_github.pub</code> ，前者为私钥，后者为公钥，我们只需要把公钥上传到github账户的公钥管理中即可。</p><p>我们还可以使用Finder查看该路径：Finder-&gt;右键-&gt;前往文件夹-&gt; <code>~/.ssh</code></p><h4 id="查看公钥"><a href="#查看公钥" class="headerlink" title="查看公钥"></a>查看公钥</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa_github.pub </span><br></pre></td></tr></table></figure><p>可查看名为 <code>id_rsa_github.pub</code> 的公钥，将其复制下来。</p><h2 id="公钥管理"><a href="#公钥管理" class="headerlink" title="公钥管理"></a>公钥管理</h2><p>打开<code>Github</code>或者<code>自己的git管理页</code>面，在<code>个人中心</code>找到<code>公钥管理</code>，添加制作的公钥，保存。</p><h2 id="ssh-key-配置文件制作"><a href="#ssh-key-配置文件制作" class="headerlink" title="ssh key 配置文件制作"></a>ssh key 配置文件制作</h2><h4 id="配置文件制作"><a href="#配置文件制作" class="headerlink" title="配置文件制作"></a>配置文件制作</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.ssh/config </span><br></pre></td></tr></table></figure><h4 id="配置-github-的ssh-key"><a href="#配置-github-的ssh-key" class="headerlink" title="配置 github 的ssh key"></a>配置 <code>github</code> 的ssh key</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># github</span><br><span class="line">Host github.com</span><br><span class="line">HostName github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa_github</span><br><span class="line"></span><br><span class="line"># oschina</span><br><span class="line">Host gitee.com</span><br><span class="line">HostName gitee.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa_gitee</span><br><span class="line"></span><br><span class="line"># 其它</span><br><span class="line">... </span><br></pre></td></tr></table></figure><p>其中 <code>Host</code> 为站点； <code>HostName</code> 为站点名； <code>PreferredAuthentications</code> 为优先使用公钥连接； <code>IdentityFile</code> ，私钥路径。</p><p>如果站点为 <code>ip地址</code> ，则用 <code>ip地址</code> 代替 <code>域名</code> 即可。</p><h4 id="账户验证"><a href="#账户验证" class="headerlink" title="账户验证"></a>账户验证</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com </span><br></pre></td></tr></table></figure><p>格式为<code>git@域名</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi xxx! You&#x27;ve successfully ... </span><br></pre></td></tr></table></figure><p>配置成功</p><p>如果有如下提示</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host &#x27;github.com (52.74.223.119)&#x27; can&#x27;t be established.</span><br><span class="line">RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.</span><br><span class="line">Are you sure you want to continue connecting (yes/no)? </span><br></pre></td></tr></table></figure><p>键入<code>yes</code>即可。</p><p>如果仍旧报错，可删除 <code>~/.ssh</code> 目录下的 <code>known_host</code> 文件里对应的站点公钥信息，然后重新账户验证。</p><p>同理，我们还可以继续添加其它账号的 <code>ssh key</code> ，这样就可以同一台电脑，使用多个 <code>ssh key</code> 免密码的git操作了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;同一台电脑管理多个SSH-key&quot;&gt;&lt;a href=&quot;#同一台电脑管理多个SSH-key&quot; class=&quot;headerlink&quot; title=&quot;同一台电脑管理多个SSH key&quot;&gt;&lt;/a&gt;同一台电脑管理多个SSH key&lt;/h1&gt;&lt;h2 id=&quot;SSH-key生成</summary>
+      
+    
+    
+    
+    
+    <category term="令牌" scheme="https://blogog.top/tags/%E4%BB%A4%E7%89%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>win10专业版激活</title>
+    <link href="https://blogog.top/posts/e86019d.html"/>
+    <id>https://blogog.top/posts/e86019d.html</id>
+    <published>2023-02-19T10:59:09.000Z</published>
+    <updated>2023-02-19T11:29:35.185Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="win10专业版激活"><a href="#win10专业版激活" class="headerlink" title="win10专业版激活"></a><strong>win10专业版激活</strong></h1><h6 id="1-首先，我们先查看一下Win10正式专业版系统的激活状态：-点击桌面左下角的“Windows”按钮，从打开的扩展面板中依次点击“设置”-“更新和安全”，并切换到“激活”选项卡，在此就可以查看到当前系统的激活状态。如图，Win10正式专业版当前未激活"><a href="#1-首先，我们先查看一下Win10正式专业版系统的激活状态：-点击桌面左下角的“Windows”按钮，从打开的扩展面板中依次点击“设置”-“更新和安全”，并切换到“激活”选项卡，在此就可以查看到当前系统的激活状态。如图，Win10正式专业版当前未激活" class="headerlink" title="1.首先，我们先查看一下Win10正式专业版系统的激活状态：  点击桌面左下角的“Windows”按钮，从打开的扩展面板中依次点击“设置”-“更新和安全”，并切换到“激活”选项卡，在此就可以查看到当前系统的激活状态。如图，Win10正式专业版当前未激活"></a>1.首先，我们先查看一下Win10正式专业版系统的激活状态：  点击桌面左下角的“Windows”按钮，从打开的扩展面板中依次点击“设置”-“更新和安全”，并切换到“激活”选项卡，在此就可以查看到当前系统的激活状态。如图，Win10正式专业版当前未激活</h6><h6 id="2-接下来在桌面左下角的“cortana”搜索框中输入“CMD”，待出现“命令提示符”工具时，右击选择“以管理员身份”运行。"><a href="#2-接下来在桌面左下角的“cortana”搜索框中输入“CMD”，待出现“命令提示符”工具时，右击选择“以管理员身份”运行。" class="headerlink" title="2.接下来在桌面左下角的“cortana”搜索框中输入“CMD”，待出现“命令提示符”工具时，右击选择“以管理员身份”运行。"></a>2.接下来在桌面左下角的“cortana”搜索框中输入“CMD”，待出现“命令提示符”工具时，右击选择“以管理员身份”运行。</h6><h6 id="3-此时将“以管理员身份”打开“MSDOS”窗口，在此界面中，依次输出以下命令：slmgr-vbs-upk-复制以上命令，并在MSDOW窗口中右击以粘贴此命令，按回车进行确定。此时弹出窗口显未“已成功卸载了产品密钥”。"><a href="#3-此时将“以管理员身份”打开“MSDOS”窗口，在此界面中，依次输出以下命令：slmgr-vbs-upk-复制以上命令，并在MSDOW窗口中右击以粘贴此命令，按回车进行确定。此时弹出窗口显未“已成功卸载了产品密钥”。" class="headerlink" title="3.此时将“以管理员身份”打开“MSDOS”窗口，在此界面中，依次输出以下命令：slmgr.vbs /upk  复制以上命令，并在MSDOW窗口中右击以粘贴此命令，按回车进行确定。此时弹出窗口显未“已成功卸载了产品密钥”。"></a>3.此时将“以管理员身份”打开“MSDOS”窗口，在此界面中，依次输出以下命令：slmgr.vbs /upk  复制以上命令，并在MSDOW窗口中右击以粘贴此命令，按回车进行确定。此时弹出窗口显未“已成功卸载了产品密钥”。</h6><h6 id="4-接着输入以下命令：slmgr-ipk-W269N-WFGWX-YVC9B-4J6C9-T83GX-弹出窗口提示：“成功的安装了产品密钥”。"><a href="#4-接着输入以下命令：slmgr-ipk-W269N-WFGWX-YVC9B-4J6C9-T83GX-弹出窗口提示：“成功的安装了产品密钥”。" class="headerlink" title="4.接着输入以下命令：slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX 弹出窗口提示：“成功的安装了产品密钥”。"></a>4.接着输入以下命令：slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX 弹出窗口提示：“成功的安装了产品密钥”。</h6><h6 id="5-继续输入以下命令：slmgr-skms-zh-us-to-弹出窗口提示：“密钥管理服务计算机名成功的设置为zh-us-to”。"><a href="#5-继续输入以下命令：slmgr-skms-zh-us-to-弹出窗口提示：“密钥管理服务计算机名成功的设置为zh-us-to”。" class="headerlink" title="5.继续输入以下命令：slmgr /skms zh.us.to  弹出窗口提示：“密钥管理服务计算机名成功的设置为zh.us.to”。"></a>5.继续输入以下命令：slmgr /skms zh.us.to  弹出窗口提示：“密钥管理服务计算机名成功的设置为zh.us.to”。</h6><h6 id="6-接下来输入以下命令：slmgr-ato-此时将弹出窗口提示：“成功的激活了产品”。"><a href="#6-接下来输入以下命令：slmgr-ato-此时将弹出窗口提示：“成功的激活了产品”。" class="headerlink" title="6.接下来输入以下命令：slmgr /ato  此时将弹出窗口提示：“成功的激活了产品”。"></a>6.接下来输入以下命令：slmgr /ato  此时将弹出窗口提示：“成功的激活了产品”。</h6><h6 id="7-最后就可以再次查看当前Win10正式专业版系统的激活状态啦。如图所示，表明已成功激活Win10正式专业版系统。"><a href="#7-最后就可以再次查看当前Win10正式专业版系统的激活状态啦。如图所示，表明已成功激活Win10正式专业版系统。" class="headerlink" title="7.最后就可以再次查看当前Win10正式专业版系统的激活状态啦。如图所示，表明已成功激活Win10正式专业版系统。"></a>7.最后就可以再次查看当前Win10正式专业版系统的激活状态啦。如图所示，表明已成功激活Win10正式专业版系统。</h6>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;win10专业版激活&quot;&gt;&lt;a href=&quot;#win10专业版激活&quot; class=&quot;headerlink&quot; title=&quot;win10专业版激活&quot;&gt;&lt;/a&gt;&lt;strong&gt;win10专业版激活&lt;/strong&gt;&lt;/h1&gt;&lt;h6 id=&quot;1-首先，我们先查看一下Win1</summary>
+      
+    
+    
+    
+    
+    <category term="win10" scheme="https://blogog.top/tags/win10/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Typora永久破解教程</title>
+    <link href="https://blogog.top/posts/605a3c7d.html"/>
+    <id>https://blogog.top/posts/605a3c7d.html</id>
+    <published>2023-02-19T10:53:29.000Z</published>
+    <updated>2023-02-19T11:29:32.157Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Typora-永久破解教程-注册码-v1-0-4-激活教程-图文教程-亲测可用（附带下载）"><a href="#Typora-永久破解教程-注册码-v1-0-4-激活教程-图文教程-亲测可用（附带下载）" class="headerlink" title="Typora 永久破解教程 注册码 v1.0.4 激活教程 图文教程 亲测可用（附带下载）"></a>Typora 永久破解教程 注册码 v1.0.4 激活教程 图文教程 亲测可用（附带下载）</h1><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/011-2.jpg" alt=""></p><p>以下教程亲测可用，需要使用我提供的Typora安装包，安装低版本的Typora，如果你已经安装了其他版本，建议请先卸载。因为其他版本，我未测试。</p><h2 id="一、Typora下载及安装（文末附件下载）"><a href="#一、Typora下载及安装（文末附件下载）" class="headerlink" title="一、Typora下载及安装（文末附件下载）"></a>一、Typora下载及安装（文末附件下载）</h2><ul><li><a href="https://wwqn.lanzoul.com/il05U0o1t23a">下载</a></li></ul><p>请前往文章末尾的云盘下载Typora安装包和其他文件，下载下来一共包含三个文件：</p><ol><li>typora-setup-x64.exe，</li><li>app.asar.txt，</li><li>key.txt</li></ol><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/012.jpg" alt=""></p><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/012.jpg" alt=""></p><blockquote><p>说明：本教程仅在typora 1.0.4版本下测试，其他版本暂未测试，请下载我提供的版本。</p></blockquote><ul><li>安装</li></ul><p>双击执行typora-setup-x64.exe程序，选择为所有用户安装</p><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/001-1.jpg" alt=""></p><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/001-1.jpg" alt=""></p><p>修改安装目录为d盘</p><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/002-1.jpg" alt=""></p><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/002-1.jpg" alt=""></p><p>创建桌面图标</p><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/003-1.jpg" alt=""></p><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/003-1.jpg" alt=""></p><p>开始安装</p><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/004-1.jpg" alt=""></p><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/004-1.jpg" alt=""></p><p>安装结束</p><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/005-1.jpg" alt=""></p><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/005-1.jpg" alt=""></p><p>安装完可以退出Typora工具。下面还是进行破解。操作很简单。</p><h2 id="二、激活操作"><a href="#二、激活操作" class="headerlink" title="二、激活操作"></a>二、激活操作</h2><ul><li><strong>替换文件</strong></li></ul><p>先关闭Typora工具。</p><p>打开Typora工具的安装目录，到resources这一层下。将下载的补丁工具app.asar.txt修改下，去掉后缀txt，恢复app.asar，然后复制到resource下，替换掉原来的文件app.asar，也可以将原有的app.asar文件更改后缀名。</p><blockquote><p>提示：如果文件后缀名隐藏了，请打开文件后缀</p></blockquote><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/010-1.jpg" alt=""></p><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/010-1.jpg" alt=""></p><p>重启Typora工具</p><ul><li><strong>输入序列号</strong></li></ul><blockquote><p>复制一个下面的序列号</p><p>DZTX2H-6MCQZT-QL4GCT-5EBWFX<br>G7LPKN-HP4NLD-FA3BGF-6JDQ5R<br>3MH4Y8-YJWT37-G5JL9Y-UHNQDJ<br>85ZPHY-ELQ9FQ-94J3VP-D92YLU<br>VEZ7NV-USYN3G-8TL2N3-DADUG4</p></blockquote><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/009.jpg" alt=""></p><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/009.jpg" alt=""></p><p>之后点击激活，没有问题的话，应该就可以激活成功了。</p><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/011-2.jpg" alt=""></p><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/011-2.jpg" alt=""></p><ul><li><strong>跳过该版本</strong></li></ul><p>如果遇到提示更新，尽量不要去更新，直接跳过该版本。</p><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/007-1.jpg" alt=""></p><p><img src="https://blog.idejihuo.com/wp-content/uploads/2022/09/007-1.jpg" alt=""></p><p>ok，到这里激活就介绍完了。大家可以尝试下。</p><p><a href="https://wwqn.lanzoul.com/il05U0o1t23a">下载</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Typora-永久破解教程-注册码-v1-0-4-激活教程-图文教程-亲测可用（附带下载）&quot;&gt;&lt;a href=&quot;#Typora-永久破解教程-注册码-v1-0-4-激活教程-图文教程-亲测可用（附带下载）&quot; class=&quot;headerlink&quot; title=&quot;Ty</summary>
+      
+    
+    
+    
+    
+    <category term="Typora" scheme="https://blogog.top/tags/Typora/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo在PowerShell无法运行问题</title>
+    <link href="https://blogog.top/posts/324882c3.html"/>
+    <id>https://blogog.top/posts/324882c3.html</id>
+    <published>2023-02-19T10:43:59.000Z</published>
+    <updated>2023-02-19T11:29:52.795Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Hexo在PowerShell无法运行问题"><a href="#Hexo在PowerShell无法运行问题" class="headerlink" title="Hexo在PowerShell无法运行问题"></a>Hexo在PowerShell无法运行问题</h1><p>   Hexo在cmd下运行没有问题，但是在power shell运行报错。</p><h4 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h4><p>   以管理员身份在power shell运行如下，并选择y。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy -ExecutionPolicy UNRESTRICTED</span><br></pre></td></tr></table></figure><p>参考：<a href="https://sobaigu.com/hexo-con-not-process-in-powershell.html">link</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Hexo在PowerShell无法运行问题&quot;&gt;&lt;a href=&quot;#Hexo在PowerShell无法运行问题&quot; class=&quot;headerlink&quot; title=&quot;Hexo在PowerShell无法运行问题&quot;&gt;&lt;/a&gt;Hexo在PowerShell无法运行问题&lt;/</summary>
+      
+    
+    
+    
+    
+    <category term="Hexo" scheme="https://blogog.top/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>文章转载</title>
@@ -242,7 +330,7 @@
     <link href="https://blogog.top/posts/62a96202.html"/>
     <id>https://blogog.top/posts/62a96202.html</id>
     <published>2022-12-16T14:13:57.000Z</published>
-    <updated>2023-02-11T13:26:50.599Z</updated>
+    <updated>2023-02-18T05:13:39.918Z</updated>
     
     <content type="html"><![CDATA[<!-- 1.  hexo clean 清理缓存2.  hexo g 生成网站静态文件到默认设置的 public 文件夹(hexo generate 的缩写)3.  hexo s 网站预览4.  hexo d 部署 --><div class="tip info"><p>1.hexo clean 清理缓存</p></div><div class="tip info"><p>2.hexo g 生成网站静态文件到默认设置的 public 文件夹(hexo generate 的缩写)</p></div><div class="tip info"><p>3.exo s 网站预览</p></div><div class="tip info"><p>4.hexo d 部署</p></div>]]></content>
     
