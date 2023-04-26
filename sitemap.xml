@@ -259,6 +259,13 @@
   </url>
   
   <url>
+    <loc>https://blogog.top/tags/Typora/</loc>
+    <lastmod>2023-04-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blogog.top/tags/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2023-04-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -267,13 +274,6 @@
   
   <url>
     <loc>https://blogog.top/tags/Linux/</loc>
-    <lastmod>2023-04-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blogog.top/tags/Typora/</loc>
     <lastmod>2023-04-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
