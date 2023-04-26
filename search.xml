@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>demo</title>
+      <link href="/posts/d642dfa0.html"/>
+      <url>/posts/d642dfa0.html</url>
+      
+        <content type="html"><![CDATA[<p>场景<br>适用于两台服务器之间迁移</p><p>环境<br>一颗聪明的大脑<br>两台服务器（服务器A与服务器B）<br>宝塔面板<br>DNS<br>配置开始<br>将服务器A网站数据全部打包下载到本地（包含数据库备份）</p><p>图片[1]-WordPress 迁移-方糖博客<br>将打包好的网站数据上传到服务器B，进行解压，在宝塔将数据库创建好，把备份好的数据库文件导入新的数据库里，在网站数据文件里找到此文件 WP-config.php 修改内容大概在24-30行之间，修改的内容为新数据库用户名、密码、数据库名。将域名解析到新的服务器上，等待生效即可。</p><p><img src="https://p.iftft.com/wp/2022/09/247250f15e170317.jpg" alt="2"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> demo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>git常用命令</title>
       <link href="/posts/423abe9e.html"/>
       <url>/posts/423abe9e.html</url>
