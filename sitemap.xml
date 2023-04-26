@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blogog.top/posts/82a60959.html</loc>
+    
+    <lastmod>2023-04-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blogog.top/posts/9fe78a1c.html</loc>
     
     <lastmod>2023-02-19</lastmod>
@@ -257,14 +266,14 @@
   </url>
   
   <url>
-    <loc>https://blogog.top/tags/Typora/</loc>
+    <loc>https://blogog.top/tags/Linux/</loc>
     <lastmod>2023-04-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blogog.top/tags/Linux/</loc>
+    <loc>https://blogog.top/tags/Typora/</loc>
     <lastmod>2023-04-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
